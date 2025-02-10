@@ -196,32 +196,33 @@ section h2:hover::after {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Our Products Section - Adjusted Product Card Hover Effects */
+/* Our Products Section */
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
 }
 
 .product-card {
     width: 250px;
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
 }
 
+/* Hover effect: Only the hovered product-card enlarges */
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Image Hover Effect for the hovered product card only */
-.product-image img {
+/* Product Image: Scale only within the hovered product-card */
+.product-card .product-image img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
@@ -231,12 +232,11 @@ section h2:hover::after {
     transform: scale(1.1);
 }
 
-/* Product Info and More Details */
+/* Product Information Styling */
 .product-info {
     padding: 20px;
     text-align: left;
 }
-
 .product-info h3 {
     margin: 0 0 10px;
     font-size: 1.2em;
@@ -247,13 +247,14 @@ section h2:hover::after {
     color: #555;
 }
 
-/* Only show the more details for the card being hovered */
+/* Hide additional details by default */
 .more-details {
     display: none;
     margin-top: 10px;
     color: #333;
 }
 
+/* Only show the additional details when hovering over the current product-card */
 .product-card:hover .more-details {
     display: block;
 }
@@ -366,7 +367,7 @@ footer {
     text-decoration: none;
 }
 
-.social-media a:hover {
+social-media a:hover {
     color: #ddd;
 }
 
