@@ -196,6 +196,7 @@ section h2:hover::after {
     transition: transform 0.5s ease-in-out;
 }
 
+/* Our Products Section - Adjusted Product Card Hover Effects */
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -219,6 +220,7 @@ section h2:hover::after {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Image Hover Effect for the hovered product card only */
 .product-image img {
     width: 100%;
     height: auto;
@@ -229,6 +231,7 @@ section h2:hover::after {
     transform: scale(1.1);
 }
 
+/* Product Info and More Details */
 .product-info {
     padding: 20px;
     text-align: left;
@@ -244,6 +247,7 @@ section h2:hover::after {
     color: #555;
 }
 
+/* Only show the more details for the card being hovered */
 .more-details {
     display: none;
     margin-top: 10px;
