@@ -728,44 +728,196 @@ footer .social-media a:hover {
     transform: translateY(0);
 }
 
-/* Mobile adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-  /* Adjust hero text sizes for better readability */
-  .hero h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-  }
-  .hero p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  /* Stack contact info and form vertically */
-  .contact-container {
-    flex-direction: column;
-  }
-  .contact-info,
-  .contact-form {
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
+    /* Adjust Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    /* Reduce hero height for better mobile view */
+    .hero {
+        height: 50vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    /* Section padding reduced */
+    section {
+        padding: 30px 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* About container updates */
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-content h2 {
+        font-size: 2rem;
+    }
+    
+    /* Adjust services and product layouts */
+    .services-container,
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-card {
+        width: 90%;  /* Make product cards nearly full-width on mobile */
+        margin-bottom: 20px;
+    }
+    
+    /* Footer adjustments for stacking */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
-@media (max-width: 480px) {
-  /* Further reduce font-size on very small screens */
-  .hero h2 {
-    font-size: 30px;
-  }
-  .hero p {
-    font-size: 14px;
-  }
-
-  /* Adjust navigation gap for smaller devices */
-  nav ul {
-    gap: 12px;
-  }
-  nav a {
-    font-size: 14px;
-  }
+/* Mobile Version - New Style Adjustments */
+@media (max-width: 768px) {
+    /* Global adjustments */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    
+    /* Header & Navigation */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .hero-content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Section adjustments */
+    section {
+        padding: 20px 5px;
+        margin-bottom: 30px;
+    }
+    
+    section h2 {
+        font-size: 1.8rem;
+        padding-bottom: 5px;
+    }
+    
+    /* Our Products Section */
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .product-card {
+        width: 95%;
+        margin: 0 auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .product-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .product-card .product-image img {
+        transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image img {
+        transform: scale(1.05);
+    }
+    
+    .product-info {
+        padding: 15px;
+    }
+    
+    .more-details {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+    
+    /* Our Services Section */
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .service-card {
+        width: 90%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+    
+    /* Footer adjustments */
+    footer {
+      padding: 30px 10px;
+      text-align: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #contact-form {
+        width: 100%;
+        max-width: 360px;
+        padding: 15px;
+    }
+    
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
+        width: calc(100% - 20px);
+        margin: 0 10px 8px;
+    }
 }
