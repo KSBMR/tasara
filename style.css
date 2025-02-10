@@ -728,63 +728,44 @@ footer .social-media a:hover {
     transform: translateY(0);
 }
 
-/* Mobile Adjustments */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    /* Adjust Navigation */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li {
-        margin: 10px 0;
-    }
-    
-    /* Reduce hero height for better mobile view */
-    .hero {
-        height: 50vh;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-    
-    /* Section padding reduced */
-    section {
-        padding: 30px 10px;
-        margin-bottom: 30px;
-    }
-    
-    /* About container updates */
-    .about-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .about-content h2 {
-        font-size: 2rem;
-    }
-    
-    /* Adjust services and product layouts */
-    .services-container,
-    .product-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .product-card {
-        width: 90%;  /* Make product cards nearly full-width on mobile */
-        margin-bottom: 20px;
-    }
-    
-    /* Footer adjustments for stacking */
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  /* Adjust hero text sizes for better readability */
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* Stack contact info and form vertically */
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce font-size on very small screens */
+  .hero h2 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* Adjust navigation gap for smaller devices */
+  nav ul {
+    gap: 12px;
+  }
+  nav a {
+    font-size: 14px;
+  }
 }
